@@ -52,7 +52,7 @@ export default function ArticleTable() {
 
   return (
     <Table className="w-1/2 bg-slate-50 mx-auto my-10">
-      <TableCaption>Legacy Guide Table</TableCaption>
+      <TableCaption>Legacy Guide Table (**Image imports are not currently working**)</TableCaption>
       <TableHeader className="bg-slate-100">
         <TableRow>
           <TableHead className="w-[100px]">ID</TableHead>
