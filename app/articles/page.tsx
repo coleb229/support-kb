@@ -31,25 +31,20 @@ export default function ArticleTable() {
         },
         {
           id: 3,
-          title: "Supported Devices Guide",
-          page: 'supportedDevices',
-          createdAt: "03/05/2023",
-          updated_at: "2021-08-01T12:00:00.000Z",
-        },
-        {
-          id: 4,
           title: "Hardware Setup Guide",
-          page: 'installsGuide',
+          page: 'hardwareGuide',
           createdAt: "03/07/2023",
           updated_at: "2021-08-01T12:00:00.000Z",
         },
+        /* fix later
         {
-          id: 5,
+          id: 4,
           title: "Optional Hardware Setup Guide",
           page: 'optionalHardwareGuide',
           createdAt: "03/07/2023",
           updated_at: "2021-08-01T12:00:00.000Z",
         },
+        */
       ],
     }
   }
