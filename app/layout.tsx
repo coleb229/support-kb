@@ -22,7 +22,6 @@ export default async function RootLayout({
 
   const session = await getServerSession(authOptions)
   const email = session?.user?.email
-  const name = session?.user?.name
   const firstName = session?.user?.name?.split(' ')[0]
 
   if(email === undefined) {
@@ -51,18 +50,17 @@ export default async function RootLayout({
         </body>
       </html>
     )
+  } else {
+      return (
+        <html lang="en">
+          <body className={inter.className}>
+            <TopNavbar session={firstName} />
+            {children}
+            <div id='viewLogout'>
+              <LogoutButton />
+            </div>
+          </body>
+        </html>
+      )
   }
-
-
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <TopNavbar session={firstName} />
-        {children}
-        <div id='viewLogout'>
-          <LogoutButton />
-        </div>
-      </body>
-    </html>
-  )
 }
