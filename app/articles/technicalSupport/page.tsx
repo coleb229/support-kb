@@ -5,9 +5,9 @@ import SectionHeader from '../legacy/components/SectionHeader.js';
 import QuickTable from '../legacy/components/QuickTable.js';
 import ImageContainer from '../legacy/components/ImageContainer.js';
 // image imports
-import assignment from '@/public/assets/assignment.jpg';
-import priority from '../../../public/assets/priority.jpg';
-import handoff from '../../../public/assets/handoff.jpg';
+import assignment from '@/public/assets/assignment.JPG';
+import priority from '../../../public/assets/priority.JPG';
+import handoff from '../../../public/assets/handoff.JPG';
 // data import
 import Data from '../legacy/data/TechnicalSupport.data';
 

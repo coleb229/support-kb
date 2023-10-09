@@ -17,23 +17,37 @@ export default function ArticleTable() {
       articles: [
         {
           id: 1,
-          title: "Technical Support Guide",
-          page: 'technicalSupport',
-          created_at: "2021-08-01T12:00:00.000Z",
+          title: "Error Code Guide",
+          page: 'errorCodes',
+          createdAt: "02/22/2023",
           updated_at: "2021-08-01T12:00:00.000Z",
         },
         {
           id: 2,
-          title: "Error Code Guide",
-          page: 'errorCodes',
-          created_at: "2021-08-01T12:00:00.000Z",
+          title: "Technical Support Guide",
+          page: 'technicalSupport',
+          createdAt: "03/03/2023",
           updated_at: "2021-08-01T12:00:00.000Z",
         },
         {
           id: 3,
-          title: "Technical Support Guide",
-          page: 'technicalSupport',
-          created_at: "2021-08-01T12:00:00.000Z",
+          title: "Supported Devices Guide",
+          page: 'supportedDevices',
+          createdAt: "03/05/2023",
+          updated_at: "2021-08-01T12:00:00.000Z",
+        },
+        {
+          id: 4,
+          title: "Hardware Setup Guide",
+          page: 'installsGuide',
+          createdAt: "03/07/2023",
+          updated_at: "2021-08-01T12:00:00.000Z",
+        },
+        {
+          id: 5,
+          title: "Optional Hardware Setup Guide",
+          page: 'optionalHardwareGuide',
+          createdAt: "03/07/2023",
           updated_at: "2021-08-01T12:00:00.000Z",
         },
       ],
@@ -43,7 +57,7 @@ export default function ArticleTable() {
 
   return (
     <Table className="w-1/2 bg-slate-50 mx-auto my-10">
-      <TableCaption>A list of your recent invoices.</TableCaption>
+      <TableCaption>Legacy Guide Table</TableCaption>
       <TableHeader className="bg-slate-100">
         <TableRow>
           <TableHead className="w-[100px]">ID</TableHead>
@@ -59,6 +73,9 @@ export default function ArticleTable() {
               </TableCell>
               <TableCell>
                 <a href={`/articles/${article.page}`}>{article.title}</a>
+              </TableCell>
+              <TableCell>
+                {article.createdAt}
               </TableCell>
             </TableRow>
           ))}

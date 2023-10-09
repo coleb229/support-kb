@@ -4,6 +4,7 @@ import PageNav from '../legacy/components/PageNav.js';
 import SectionHeader from '../legacy/components/SectionHeader.js';
 import References from '../legacy/components/References.js';
 //images below
+{/*}
 import ip_error from '../../../public/assets/err.jpeg';
 import listen_error from '../../../public/assets/listen-error.jpg';
 import listen1 from '../../../public/assets/listen1.jpg';
@@ -11,6 +12,7 @@ import listen2 from '../../../public/assets/listen2.jpg';
 import listen3 from '../../../public/assets/listen3.jpg';
 import stations from '../../../public/assets/stations.jpg';
 import tip_settings from '../../../public/assets/tip-settings.jpg';
+*/}
 // data import
 import Data from '../legacy/data/ErrorGuide.data.js';
 
