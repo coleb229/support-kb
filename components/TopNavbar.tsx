@@ -14,7 +14,14 @@ export default function TopNavbar() {
     <div className="flex justify-between items-center bg-slate-100 px-10">
       <MenuNavs />
       <div>
-        <a href="/" className="hover:text-slate-500">Home</a>
+        <ul className="flex">
+          <li className="px-4">
+            <a href="/articles" className="hover:text-slate-500">Articles</a>
+          </li>
+          <li className="px-4">
+            <a href="/" className="hover:text-slate-500">Home</a>
+          </li>
+        </ul>
       </div>
     </div>
   )
@@ -158,6 +165,18 @@ const MenuNavs = () => {
                     className="text-xs flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-lg hover:shadow-md"
                   >
                     User Guide Submissions [WIP]
+                  </a>
+                  </NavigationMenuLink>
+                  <hr className="border-gray-200 my-2" />
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink>
+                  <a 
+                    href="https://drive.google.com/drive/folders/1UxDT6GPVaDeV4cYr08EfI-zOab5yBXxU" 
+                    target="_blank" 
+                    className="text-xs flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-lg hover:shadow-md"
+                  >
+                    Guide Suggestions [WIP]
                   </a>
                   </NavigationMenuLink>
                 </li>
