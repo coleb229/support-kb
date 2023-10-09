@@ -448,20 +448,12 @@ const ErrorGuide = () => {
               sure fire way of getting rid of the error.
               <br />
               <br />
-              We can resolve this error by closing the batch on the terminal. To
-              do this, go to the POS device connected to the payment terminal in
-              question and navigate to the left-side menu by tapping the
-              hamburger toggle on the top left of the screen. From here, tap on
-              the section labeled 'POS Operations'. From POS Operations, you
-              will see a link to Batch Operations, which is where we will close
-              the batch. On this page, simply tap on 'Close Batch' and the batch
-              will close. This should get rid of the Template Error and the
-              merchant can get back to taking payments on this station.
+              We can resolve this error by force closing both the pos app and the 
+              payment processing app at the same time and then restarting them.
               <br />
               <br />
-              Another method I have had luck with in the past, is by enabling
-              tip adjustment in the payment gateway. If this is how they do
-              tips, try this first.
+              If this does not fix it try to restart the device and then proceed to 
+              close the batch if the restart fails.
               <br />
               <br />
             </p>

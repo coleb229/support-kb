@@ -20,7 +20,7 @@ export default function ArticleTable() {
           title: "Error Code Guide",
           page: 'errorCodes',
           createdAt: "02/22/2023",
-          updated_at: "2021-08-01T12:00:00.000Z",
+          updated_at: "10/09/2023",
         },
         {
           id: 2,
