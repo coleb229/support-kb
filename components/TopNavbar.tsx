@@ -85,7 +85,7 @@ const MenuNavs = () => {
                     <div className="px-10 py-2 bg-slate-30">
                       <p className="text-xs border-b-[1px] border-gray">Comparison tool for comparing our data with settlement reports</p>
                       <p className="text-xs">Built with Python</p>
-                      <p className="text-xs">Really annoying to use because I suck at Python</p>
+                      <p className="text-xs">Really annoying to use because I'm bad at Python</p>
                       <p className="text-xs">Rough setup</p>
                     </div>
                   </NavigationMenuLink>
