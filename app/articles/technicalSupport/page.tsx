@@ -5,9 +5,11 @@ import SectionHeader from '../legacy/components/SectionHeader.js';
 import QuickTable from '../legacy/components/QuickTable.js';
 import ImageContainer from '../legacy/components/ImageContainer.js';
 // image imports
+{/*}
 import assignment from '@/public/assets/assignment.JPG';
 import priority from '../../../public/assets/priority.JPG';
 import handoff from '../../../public/assets/handoff.JPG';
+*/}
 // data import
 import Data from '../legacy/data/TechnicalSupport.data';
 
@@ -427,11 +429,7 @@ const ShiftHandoff = () => {
             </ul>
           </div>
           <div>
-            <ImageContainer
-              className='w-full'
-              src={handoff}
-              desc='Example of a Shift Handoff'
-            />
+            {/*<img className='' src={handoff} alt='Handoff' />*/}
           </div>
         </div>
         <div className='mx-10 mt-10 flex justify-around'>
