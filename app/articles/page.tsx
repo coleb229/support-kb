@@ -67,7 +67,7 @@ export default function ArticleTable() {
                 {article.id}
               </TableCell>
               <TableCell>
-                <a href={`/articles/${article.page}`}>{article.title}</a>
+                <a href={`/articles/legacy/${article.page}`}>{article.title}</a>
               </TableCell>
               <TableCell>
                 {article.createdAt}

@@ -1,8 +1,8 @@
-import ArticleHeader from '../legacy/components/ArticleHeader.js';
-import References from '../legacy/components/References.js';
-import PageNav from '../legacy/components/PageNav.js';
-import ImageContainer from '../legacy/components/ImageContainer.js';
-import SubHeader from '../legacy/components/SubHeader.js';
+import ArticleHeader from '../components/ArticleHeader.js';
+import References from '../components/References.js';
+import PageNav from '../components/PageNav.js';
+import ImageContainer from '../components/ImageContainer.js';
+import SubHeader from '../components/SubHeader.js';
 // image imports
 /*
 import unifi from '../assets/unifi.JPG';
@@ -62,7 +62,7 @@ import voo4 from '../assets/voo4.JPG';
 import voo5 from '../assets/voo5.JPG';
 */
 // data import
-import Data from '../legacy/data/Installs.data.js';
+import Data from '../data/Installs.data.js';
 
 const Installs = () => {
   return (

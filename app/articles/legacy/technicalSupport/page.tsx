@@ -1,9 +1,9 @@
-import ArticleHeader from '../legacy/components/ArticleHeader.js';
-import PageNav from '../legacy/components/PageNav.js';
-import References from '../legacy/components/References.js';
-import SectionHeader from '../legacy/components/SectionHeader.js';
-import QuickTable from '../legacy/components/QuickTable.js';
-import ImageContainer from '../legacy/components/ImageContainer.js';
+import ArticleHeader from '../components/ArticleHeader.js';
+import PageNav from '../components/PageNav.js';
+import References from '../components/References.js';
+import SectionHeader from '../components/SectionHeader.js';
+import QuickTable from '../components/QuickTable.js';
+import ImageContainer from '../components/ImageContainer.js';
 // image imports
 {/*}
 import assignment from '@/public/assets/assignment.JPG';
@@ -11,7 +11,7 @@ import priority from '../../../public/assets/priority.JPG';
 import handoff from '../../../public/assets/handoff.JPG';
 */}
 // data import
-import Data from '../legacy/data/TechnicalSupport.data';
+import Data from '../data/TechnicalSupport.data.js';
 
 const TechnicalSupport = () => {
   return (

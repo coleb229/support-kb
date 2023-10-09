@@ -1,8 +1,8 @@
 //components below
-import ArticleHeader from '../legacy/components/ArticleHeader.js';
-import PageNav from '../legacy/components/PageNav.js';
-import SectionHeader from '../legacy/components/SectionHeader.js';
-import References from '../legacy/components/References.js';
+import ArticleHeader from '../components/ArticleHeader.js';
+import PageNav from '../components/PageNav.js';
+import SectionHeader from '../components/SectionHeader.js';
+import References from '../components/References.js';
 //images below
 {/*}
 import ip_error from '../../../public/assets/err.jpeg';
@@ -14,7 +14,7 @@ import stations from '../../../public/assets/stations.jpg';
 import tip_settings from '../../../public/assets/tip-settings.jpg';
 */}
 // data import
-import Data from '../legacy/data/ErrorGuide.data.js';
+import Data from '../data/ErrorGuide.data.js';
 
 const ErrorGuide = () => {
   return (
