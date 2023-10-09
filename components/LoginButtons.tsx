@@ -2,6 +2,7 @@
 import { signIn, signOut } from 'next-auth/react'
 import { Button } from '@/components/ui/button'
 import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+import { newUser } from '@/lib/actions'
 
 export const LoginButton = ({session}:any) => {
   const { pending } = useFormStatus()
@@ -19,14 +20,10 @@ export const LogoutButton = () => {
   )
 }
 
-export const AddUser = ({session, newUser}:any) => {
+export const AddUser = () => {
   return (
-    <form action={newUser}>
-      <input type='text' name='name' hidden value={session.name} />
-      <input type='text' name='email' hidden value={session.email} />
-      <Button type='submit' className='addUserButton'>
-        Add User
-      </Button>
-    </form>
+    <Button onClick={() => newUser()} className='addUserButton'>
+      Add User
+    </Button>
   )
 }
