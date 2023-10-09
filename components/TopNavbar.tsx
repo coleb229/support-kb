@@ -7,12 +7,31 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 
-export default function TopNavbar() {
+export default function TopNavbar({session}:any) {
   return (
     <div className="flex justify-between items-center bg-slate-100 px-10">
       <MenuNavs />
+      <div className="flex">
+        <h1 className="text-lg">Hello {session} </h1>
+        <DropdownMenu>
+          <DropdownMenuTrigger><b className="text-xl ml-2">↴</b></DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem><a href="/profile" className="hover:text-slate-500">Profile</a></DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
       <div>
         <ul className="flex">
           <li className="px-4">
@@ -109,6 +128,9 @@ const MenuNavs = () => {
                   >
                     Guides ( Work in Progress )
                   </a>
+                  <div className="px-10 py-2 bg-slate-30">
+                    <p className="text-xs">General Guides on Support Processes</p>
+                  </div>
                   </NavigationMenuLink>
                   <hr className="border-gray-200 my-2" />
                 </li>
@@ -121,18 +143,24 @@ const MenuNavs = () => {
                   >
                     Resources [In Progress]
                   </a>
+                  <div className="px-10 py-2 bg-slate-30">
+                    <p className="text-xs">Resources more related to hardware setup</p>
+                  </div>
                   </NavigationMenuLink>
                   <hr className="border-gray-200 my-2" />
                 </li>
                 <li className="row-span-3">
                   <NavigationMenuLink>
                     <a 
-                      href="https://drive.google.com/drive/folders/1UxDT6GPVaDeV4cYr08EfI-zOab5yBXxU" 
+                      href="https://collab.metispro.com/ponder/" 
                       target="_blank" 
                       className="text-xs flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-lg hover:shadow-md"
                     >
                       Ponder
                     </a>
+                    <div className="px-10 py-2 bg-slate-30">
+                      <p className="text-xs">Support / Level 3 FAQ section of Collab</p>
+                    </div>
                   </NavigationMenuLink>
                 </li>
               </ul>
