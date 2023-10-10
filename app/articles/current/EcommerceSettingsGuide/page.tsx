@@ -9,8 +9,8 @@ export default function MealPeriod() {
     <div id="articleContainer">
       <ArticleHeader title="Ecommerce Settings Guide" author="Cole Brant" date="October 9, 2023" />
       <div className='flex'>
-        <Walkthrough steps={data.ecommerceSettingsSteps} />
-        <UseCases list={data.ecommerceUseCases} />
+        <Walkthrough steps={data.ecommerceSettings.steps} />
+        <UseCases list={data.ecommerceSettings.useCases} />
       </div>
     </div>
   )

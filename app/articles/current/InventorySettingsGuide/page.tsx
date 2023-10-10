@@ -9,8 +9,8 @@ export default function MealPeriod() {
     <div id="articleContainer">
       <ArticleHeader title="Inventory Settings Guide" author="Cole Brant" date="October 9, 2023" />
       <div className='flex'>
-        <Walkthrough steps={data.inventorySetupSteps} />
-        <UseCases list={data.inventoryUseCases} />
+        <Walkthrough steps={data.inventorySetup.steps} />
+        <UseCases list={data.inventorySetup.useCases} />
       </div>
     </div>
   )

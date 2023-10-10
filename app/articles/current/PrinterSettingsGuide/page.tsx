@@ -9,8 +9,8 @@ export default function MealPeriod() {
     <div id="articleContainer">
       <ArticleHeader title="Printer Settings Guide" author="Cole Brant" date="October 9, 2023" />
       <div className='flex'>
-        <Walkthrough steps={data.printerSettingsSteps} />
-        <UseCases list={data.printerUseCases} />
+        <Walkthrough steps={data.printerSettings.steps} />
+        <UseCases list={data.printerSettings.useCases} />
       </div>
     </div>
   )

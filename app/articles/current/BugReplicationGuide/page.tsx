@@ -9,8 +9,8 @@ export default function MealPeriod() {
     <div id="articleContainer">
       <ArticleHeader title="Bug Replication Guide" author="Cole Brant" date="October 9, 2023" />
       <div className='flex'>
-        <Walkthrough steps={data.bugReplicationSteps} />
-        <UseCases list={data.bugReplicationUseCases} />
+        <Walkthrough steps={data.bugReplication.steps} />
+        <UseCases list={data.bugReplication.useCases} />
       </div>
     </div>
   )
