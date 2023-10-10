@@ -82,6 +82,17 @@
   min-height: 70vh;
 }
 
+#articleContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  margin: 50px 100px;
+  padding: 40px 100px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 #viewLogout {
   position: fixed;
   bottom: 20px;
