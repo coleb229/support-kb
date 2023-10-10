@@ -20,3 +20,28 @@ export const tieredLoyaltySteps = [
   'Choose whether or not to allow for signup bonus points, and then set the bonus amount if true',
   'Hit save and refresh the pos to see the changes reflected',
 ]
+
+export const printerSettingsSteps = [
+  'Brand: Select the brand of printer that is being used',
+  'Model: Select the model of printer that is being used',
+  'IP Address: Enter the IP address of the printer (Either self-test from the printer or scan from the POS)',
+  'Has Cash Drawer: Select whether or not the printer has a cash drawer attached',
+  'Drawer Name: Enter the name of the cash drawer',
+  'Enable Drawer: This will turn the drawer features on or off',
+  'Has Second Cash Drawer: Select whether or not the printer has a second cash drawer attached',
+  'Receipt Printing: Select whether or not the printer will print receipts from this station',
+  'Re-route Printer: Select whether the tickets should be re-routed to another printer, in the scenerio that this printer is queue jammed',
+  'Online Order Printing: This should be enabled if they are on direct url online order printing, and they want online orders to print from this profile',
+  'Enable Buzzer: This will turn on the buzzer when orders are sent to the printer',
+  'Print Unassigned Items: This will print items that are not assigned to a printer',
+  'Assign Terminal: selecting printer(s) in this section will cause this to only print tickets from assigned terminals',
+  'Assign Service Area: selecting service area(s) in this section will cause this to only print tickets from assigned service areas',
+  'Show Item Price: Enable this to display item prices on the printed tickets',
+  'Label Printing: Enable this to print labels from this printer',
+]
+
+export const ecommerceSettingsSteps = ['']
+
+export const inventorySetupSteps = ['']
+
+export const bugReplicationSteps = ['']
