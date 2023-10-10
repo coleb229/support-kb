@@ -39,42 +39,42 @@ export const currentArticles = {
   data: {
     articles: [
       {
-        id: 1,
+        id: '1',
         title: 'Meal Period Setup Guide',
         page: 'MealPeriodGuide',
         createdAt: '10/09/2023',
         updated_at: '10/09/2023',
       },
       {
-        id: 2,
+        id: '2',
         title: 'Tiered Loyalty Setup Guide',
         page: 'TieredLoyaltyGuide',
         createdAt: '10/09/2023',
         updated_at: '10/09/2023',
       },
       {
-        id: 3,
+        id: '3',
         title: 'Printer Settings Guide',
         page: 'PrinterSettingsGuide',
         createdAt: '10/09/2023',
         updated_at: '10/09/2023',
       },
       {
-        id: 4,
+        id: '4',
         title: 'Ecommerce Settings Guide',
         page: 'EcommerceSettingsGuide',
         createdAt: '10/09/2023',
         updated_at: '10/09/2023',
       },
       {
-        id: 5,
+        id: '5',
         title: 'Inventory Settings Guide',
         page: 'InventorySettingsGuide',
         createdAt: '10/09/2023',
         updated_at: '10/09/2023',
       },
       {
-        id: 6,
+        id: '6',
         title: 'Bug Replication Guide',
         page: 'BugReplicationGuide',
         createdAt: '10/09/2023',

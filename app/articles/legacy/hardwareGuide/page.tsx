@@ -72,7 +72,7 @@ const Installs = () => {
         <div className='max-w-[350px]'>
           <PageNav links={Data.links} />
         </div>
-        <div className='w-[80%] bg-slate-100'>
+        <div className='w-[60%] bg-slate-100'>
           <div id='references' className='py-4'>
             <References list={Data.references} />
           </div>

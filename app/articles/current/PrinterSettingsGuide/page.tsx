@@ -1,11 +1,13 @@
 "use client"
-import { printerSettingsSteps } from '../data/data'
+import { data } from '../data/data'
 import { Walkthrough } from '@/components/Walkthrough'
+import { ArticleHeader } from '@/components/ArticleHeader'
 
 export default function MealPeriod() {
   return(
     <div id="articleContainer">
-      <Walkthrough steps={printerSettingsSteps} />
+      <ArticleHeader title="Printer Settings Guide" author="Cole Brant" date="October 9, 2023" />
+      <Walkthrough steps={data.printerSettingsSteps} />
     </div>
   )
 }

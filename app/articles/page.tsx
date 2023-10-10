@@ -1,3 +1,4 @@
+'use client'
 import {
   Table,
   TableBody,
@@ -7,76 +8,43 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
 import { legacyArticles, currentArticles } from "./data/articles.data"
+import { PageHeader } from "@/components/PageHeader"
 
 export default function ArticleTables() {
   return (
-    <div>
-      <CurrentArticleTable />
-      <LegacyArticleTable />
+    <div className="flex flex-col w-screen items-center">
+      <PageHeader title="Articles" />
+      <div className="my-auto w-[800px] border-2">
+        <Command>
+          <CommandInput placeholder="Search for a current article..." />
+          <CommandList>
+            <CommandEmpty>No results found.</CommandEmpty>
+            <CommandGroup heading="Suggestions">
+              {currentArticles.data.articles.map((article) => (
+                <CommandItem><a href={`/articles/current/${article.page}`}>{article.title}</a></CommandItem>
+              ))}
+            </CommandGroup>
+            <CommandSeparator />
+            <CommandGroup heading="Legacy">
+              {legacyArticles.data.articles.map((article) => (
+                <CommandItem><a href={`/articles/legacy/${article.page}`}>{article.title}</a></CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </div>
     </div>
-  )
-}
-
-const CurrentArticleTable = () => {
-  return (
-    <Table className="w-1/2 bg-slate-50 mx-auto my-10">
-      <TableCaption>Guide Table</TableCaption>
-      <TableHeader className="bg-slate-100">
-        <TableRow>
-          <TableHead className="w-[100px]">ID</TableHead>
-          <TableHead>Article</TableHead>
-          <TableHead>Creation Date</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-          {currentArticles.data.articles.map((article) => (
-            <TableRow>
-              <TableCell key={article.id}>
-                {article.id}
-              </TableCell>
-              <TableCell>
-                <a href={`/articles/current/${article.page}`}>{article.title}</a>
-              </TableCell>
-              <TableCell>
-                {article.createdAt}
-              </TableCell>
-            </TableRow>
-          ))}
-      </TableBody>
-    </Table>
-  )
-}
-
-const LegacyArticleTable = () => {
-
-  let i = 0
-
-  return (
-    <Table className="w-1/2 bg-slate-50 mx-auto my-10">
-      <TableCaption>Legacy Guide Table (**Image imports are not currently working**)</TableCaption>
-      <TableHeader className="bg-slate-100">
-        <TableRow>
-          <TableHead className="w-[100px]">ID</TableHead>
-          <TableHead>Article</TableHead>
-          <TableHead>Creation Date</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-          {legacyArticles.data.articles.map((article) => (
-            <TableRow>
-              <TableCell key={article.id}>
-                {article.id}
-              </TableCell>
-              <TableCell>
-                <a href={`/articles/legacy/${article.page}`}>{article.title}</a>
-              </TableCell>
-              <TableCell>
-                {article.createdAt}
-              </TableCell>
-            </TableRow>
-          ))}
-      </TableBody>
-    </Table>
   )
 }
