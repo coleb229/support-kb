@@ -1,14 +1,5 @@
 'use client'
 import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-import {
   Command,
   CommandDialog,
   CommandEmpty,
@@ -25,13 +16,13 @@ import { PageHeader } from "@/components/PageHeader"
 export default function ArticleTables() {
   return (
     <div className="flex flex-col w-screen items-center">
-      <PageHeader title="Articles" />
+      <PageHeader title="Articles" desc='Search for a knowledge article from the list below.' />
       <div className="my-auto w-[800px] border-2">
         <Command>
           <CommandInput placeholder="Search for a current article..." />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
-            <CommandGroup heading="Suggestions">
+            <CommandGroup heading="Current">
               {currentArticles.data.articles.map((article) => (
                 <CommandItem><a href={`/articles/current/${article.page}`}>{article.title}</a></CommandItem>
               ))}

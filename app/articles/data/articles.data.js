@@ -80,6 +80,13 @@ export const currentArticles = {
         createdAt: '10/09/2023',
         updated_at: '10/09/2023',
       },
+      {
+        id: '7',
+        title: 'TSYS on the Q20',
+        page: 'TsysQ20Guide',
+        createdAt: '10/09/2023',
+        updated_at: '10/09/2023',
+      },
     ],
   },
 }

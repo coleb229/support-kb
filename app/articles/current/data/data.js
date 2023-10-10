@@ -63,4 +63,31 @@ export const data = {
     'Try the steps on your end and capture any referencial material you can for the investigation',
     'If unable to replicate, try to get a video of the issue occuring on their end',
   ],
+  tsysQ20Steps: [
+    'Tap 4 corners --> Top left - Top Right - Bottom Left - Bottom Right',
+    'password: MMDDYYYY (01/12/2023)',
+    'Navigate to System Settings',
+    'Navigate to the last page by hitting the arrow on the right of the screen',
+    'Tap "App Management"',
+    'Then tap on app update Terminal should reboot on Q20 from here and once you see PAX again its done.',
+  ],
+  mealUseCases: [
+    'This is used to set up different menus for different times of the day. (i.e. Breakfast, Lunch, Dinner)',
+  ],
+  tieredLoyaltyUseCases: [
+    'This is used to set up a loyalty program for customers to earn points for purchases',
+  ],
+  printerUseCases: [
+    'This is used to set up printers for printing tickets and labels',
+  ],
+  ecommerceUseCases: ['This is used to set up an online ordering website'],
+  inventoryUseCases: ['This is used to set up inventory tracking for items'],
+  bugReplicationUseCases: [
+    'This is used to replicate bugs that are reported by customers',
+    'It is important to get as much information as possible when replicating bugs, so that the dev team can work efficiently to resolve the issue.',
+  ],
+  tsysQ20UseCases: [
+    'This is used to update the Tsys file on the Q20 reader on Pax E700/800',
+    'Also used to do more advanced troubleshooting on the Q20 reader',
+  ],
 }
