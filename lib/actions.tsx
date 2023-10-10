@@ -37,3 +37,52 @@ export const findUser = async () => {
     console.error(error)
   }
 }
+
+export const addGuideSuggestion = async (formData: any) => {
+  const session = await getServerSession(authOptions)
+  const email = session?.user?.email
+
+  try {
+    await prisma.guideSuggestion.create({
+      data: {
+        title: formData.get('title'),
+        content: formData.get('description'),
+        author: {
+          connect: {
+            email: email as string,
+          },
+        },
+      },
+    })
+    revalidatePath('/guide-suggestions')
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export const getGuideSuggestions = async () => {
+  try {
+    const guideSuggestions = await prisma.guideSuggestion.findMany({})
+    return guideSuggestions
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export const getOwnGuideSuggestions = async () => {
+  const session = await getServerSession(authOptions)
+  const email = session?.user?.email
+
+  try {
+    const guideSuggestions = await prisma.guideSuggestion.findMany({
+      where: {
+        author: {
+          email: email as string,
+        },
+      },
+    })
+    return guideSuggestions
+  } catch (error) {
+    console.error(error)
+  }
+}

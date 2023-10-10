@@ -176,8 +176,7 @@ const MenuNavs = () => {
                 <li className="row-span-3">
                   <NavigationMenuLink>
                   <a 
-                    href="https://drive.google.com/drive/folders/1fIgkicbJ5lbi8M3CV-VFuOYNNux0LCLI" 
-                    target="_blank" 
+                    href="/discoveries" 
                     className="text-xs flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-lg hover:shadow-md hover:font-semibold"
                   >
                     Discoveries [WIP]
@@ -188,8 +187,7 @@ const MenuNavs = () => {
                 <li className="row-span-3">
                   <NavigationMenuLink>
                   <a 
-                    href="https://drive.google.com/drive/folders/1UxDT6GPVaDeV4cYr08EfI-zOab5yBXxU" 
-                    target="_blank" 
+                    href="/user-guides" 
                     className="text-xs flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-lg hover:shadow-md hover:font-semibold"
                   >
                     User Guide Submissions [WIP]
@@ -200,8 +198,7 @@ const MenuNavs = () => {
                 <li className="row-span-3">
                   <NavigationMenuLink>
                   <a 
-                    href="https://drive.google.com/drive/folders/1UxDT6GPVaDeV4cYr08EfI-zOab5yBXxU" 
-                    target="_blank" 
+                    href="/guide-suggestions" 
                     className="text-xs flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-lg hover:shadow-md hover:font-semibold"
                   >
                     Guide Suggestions [WIP]
