@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -73,6 +73,24 @@
   body {
     @apply bg-background text-foreground;
   }
+  #container {
+    @apply w-5/6 flex flex-col p-24 items-center mx-auto rounded-bl-lg rounded-br-lg
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.795);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 body {
@@ -87,7 +105,7 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 90vh;
 }
 
 #articleContainer {

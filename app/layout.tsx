@@ -6,6 +6,7 @@ import { authOptions } from '@/lib/auth'
 import { revalidatePath } from 'next/cache'
 import { LoginButton, LogoutButton } from '@/components/LoginButtons'
 import TopNavbar from '@/components/TopNavbar'
+import bg from '../public/background.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 

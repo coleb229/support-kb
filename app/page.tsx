@@ -10,8 +10,8 @@ import {
 
 export default function Home() {
   return (
-    <main className="flex min-h-[90vh] flex-col items-center justify-between p-24">
-      <div id="container">
+    <main id="container">
+      <div id="">
         <div id="content">
           <h1 className="text-5xl font-bold">Support Portal Landing Page</h1>
           <p className="text-2xl pb-10">Not sure where to get started?</p>
@@ -28,7 +28,7 @@ const CommandDropdown = () => {
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
+        <CommandGroup heading="Current">
           <CommandItem><a href="/articles">Knowledge Articles</a></CommandItem>
         </CommandGroup>
         <CommandSeparator />

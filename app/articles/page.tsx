@@ -15,9 +15,9 @@ import { PageHeader } from "@/components/PageHeader"
 
 export default function ArticleTables() {
   return (
-    <div className="flex flex-col w-screen items-center">
+    <div id="container">
       <PageHeader title="Articles" desc='Search for a knowledge article from the list below.' />
-      <div className="my-auto w-[800px] border-2">
+      <div className="w-[800px] border-2">
         <Command>
           <CommandInput placeholder="Search for a current article..." />
           <CommandList>
