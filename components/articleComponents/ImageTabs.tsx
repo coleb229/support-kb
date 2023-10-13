@@ -23,7 +23,12 @@ export default function ImageTabs({images}:any) {
             count++,
             <div key={index}>
               <p className="text-center text-2xl font-bold">Step {count}</p>
-              <Image src={image} alt="Meal Period" />
+              <Image
+                src={image}
+                alt="Meal Period"
+                width={700}
+                className="mx-auto"
+              />
             </div>
           ))}
         </Slider>

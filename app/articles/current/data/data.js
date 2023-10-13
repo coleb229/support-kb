@@ -32,6 +32,9 @@ export const data = {
   },
   printerSettings: {
     steps: [
+      'Navigate to the printer section of the pos from the left-side menu and going into Hardware -> Printers',
+      'Then select the printer you will be working with',
+      'This will open the printer profile menu, where you can set the following settings:',
       'Brand: Select the brand of printer that is being used',
       'Model: Select the model of printer that is being used',
       'IP Address: Enter the IP address of the printer (Either self-test from the printer or scan from the POS)',
