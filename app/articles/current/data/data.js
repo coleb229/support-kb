@@ -1,3 +1,6 @@
+import cap from '@/public/cap.jpg'
+import background from '@/public/background.jpg'
+
 export const data = {
   mealPeriod: {
     steps: [
