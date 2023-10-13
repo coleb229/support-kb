@@ -10,7 +10,6 @@ import s3 from '@/public/current/mealPeriod/s3.jpg'
 import s4 from '@/public/current/mealPeriod/s4.jpg'
 import s5 from '@/public/current/mealPeriod/s5.jpg'
 import s6 from '@/public/current/mealPeriod/s6.jpg'
-import s7 from '@/public/current/mealPeriod/s7.jpg'
 
 export default function MealPeriod() {
   const images = [s1, s2, s3, s4, s5, s6]
