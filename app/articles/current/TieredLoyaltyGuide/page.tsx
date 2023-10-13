@@ -1,4 +1,5 @@
 "use client"
+'test'
 import { data } from '../data/data'
 import { Walkthrough } from '@/components/articleComponents/Walkthrough'
 import { ArticleHeader } from '@/components/articleComponents/ArticleHeader'
