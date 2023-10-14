@@ -19,7 +19,7 @@ import {
 
 export default function TopNavbar({session}:any) {
   return (
-    <div className="flex justify-between items-center bg-slate-100 px-10">
+    <div className="flex justify-between items-center bg-slate-100 px-10 fixed top-0 w-screen" id="z">
       <MenuNavs />
       <div className="flex">
         <h1 className="text-lg">Hello {session} </h1>
