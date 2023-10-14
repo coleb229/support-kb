@@ -9,11 +9,10 @@ import s2 from '@/public/current/mealPeriod/s2.png'
 import s3 from '@/public/current/mealPeriod/s3.png'
 import s4 from '@/public/current/mealPeriod/s4.png'
 import s5 from '@/public/current/mealPeriod/s5.png'
-import s6 from '@/public/current/mealPeriod/s6.png'
 
 
 export default function MealPeriod() {
-  const images = [s1, s2, s3, s4, s5, s6]
+  const images = [s1, s2, s3, s4, s5]
 
   return(
     <div id="articleContainer">
