@@ -41,11 +41,10 @@ export default function ImageTabs({images}:any) {
                   <Image
                     src={image}
                     alt="Steps"
-                    width={700}
                     className="mx-auto"
                   />
                 </AlertDialogTrigger>
-                <AlertDialogContent>
+                <AlertDialogContent className="">
                   <AlertDialogHeader>
                     <AlertDialogTitle>Step {count}</AlertDialogTitle>
                   </AlertDialogHeader>
