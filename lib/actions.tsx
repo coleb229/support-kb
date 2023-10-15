@@ -3,6 +3,7 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { revalidatePath } from 'next/cache'
 import prisma from './prisma'
+import exp from 'constants'
 
 export const newUser = async () => {
   const session = await getServerSession(authOptions)
@@ -16,7 +17,6 @@ export const newUser = async () => {
         name: name as string,
       },
     })
-    revalidatePath('/discoveries')
   } catch (error) {
     console.error(error)
   }
@@ -82,6 +82,54 @@ export const getOwnGuideSuggestions = async () => {
       },
     })
     return guideSuggestions
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export const addUserGuide = async (formData: any) => {
+  const session = await getServerSession(authOptions)
+  const email = session?.user?.email
+
+  try {
+    await prisma.userGuide.create({
+      data: {
+        title: formData.get('title'),
+        steps: formData.get('steps').split('\n').map((step: string) => step.trim()),
+        uses: formData.get('uses').split('\n').map((use: string) => use.trim()),
+        createdAt: new Date().toISOString(),
+        author: {
+          connect: {
+            email: email as string,
+          },
+        },
+        authorName: session?.user?.name as string,
+        authorEmail: email as string,
+      },
+    })
+    revalidatePath('/user-guides')
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export const getUserGuides = async () => {
+  try {
+    const userGuides = await prisma.userGuide.findMany({})
+    return userGuides
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export const deleteUserGuide = async (formData: any) => {
+  try {
+    await prisma.userGuide.delete({
+      where: {
+        id: formData.get('id'),
+      },
+    })
+    revalidatePath('/user-guides')
   } catch (error) {
     console.error(error)
   }

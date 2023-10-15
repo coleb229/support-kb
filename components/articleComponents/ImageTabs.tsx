@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import Image from "next/image";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -44,7 +43,7 @@ export default function ImageTabs({images}:any) {
                     className="mx-auto"
                   />
                 </AlertDialogTrigger>
-                <AlertDialogContent className="">
+                <AlertDialogContent>
                   <AlertDialogHeader>
                     <AlertDialogTitle>Step {count}</AlertDialogTitle>
                   </AlertDialogHeader>
