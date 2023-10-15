@@ -14,6 +14,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
+import { Loader } from "./Loader";
 
 
 export default function ImageTabs({images}:any) {
@@ -37,10 +38,13 @@ export default function ImageTabs({images}:any) {
               <p className="text-center text-2xl font-bold">Step {count}</p>
               <AlertDialog>
                 <AlertDialogTrigger className="cursor-pointer">
+
                   <Image
                     src={image}
                     alt="Steps"
                     className="mx-auto"
+                    loading="eager"
+                    placeholder='blur'
                   />
                 </AlertDialogTrigger>
                 <AlertDialogContent>
