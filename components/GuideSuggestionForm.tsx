@@ -15,7 +15,7 @@ export default function GuideSuggestionForm({ addGuideSuggestion }:any) {
         <SheetTrigger>Open Form</SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>What should we add to the wishlist?</SheetTitle>
+            <SheetTitle className="mt-20">What should we add to the wishlist?</SheetTitle>
             <SheetDescription>
               <form className="flex flex-col space-y-2" action={addGuideSuggestion}>
                 <label htmlFor="title">Article Topic</label>
