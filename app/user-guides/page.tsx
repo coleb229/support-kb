@@ -7,9 +7,7 @@ import { getUserGuides } from "@/lib/actions"
 export default async function UserGuides() {
   const session = await getServerSession()
   const name = session?.user?.name
-  const firstName = name?.split(" ")[0]
   const guides = await getUserGuides()
-  console.log(guides)
 
   return (
     <div id="container">

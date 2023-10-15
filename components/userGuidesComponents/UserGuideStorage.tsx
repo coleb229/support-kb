@@ -48,10 +48,10 @@ export default function UserGuideStorage({ data, session }: any) {
               <TableCell>
                 <Collapsible className="w-full">
                   <CollapsibleTrigger className="cursor-pointer">
-                    {guide.title}
+                    <b>{guide.title}</b>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="flex">
+                    <div className="flex items-center">
                       <Walkthrough steps={guide.steps} />
                       {guide.uses.length > 0 ? <UseCases list={guide.uses} /> : null}
                     </div>
