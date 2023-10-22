@@ -129,6 +129,13 @@ export const currentArticles = {
         createdAt: '10/11/2023',
         updated_at: '10/11/2023',
       },
+      {
+        id: '14',
+        title: 'Push Task Guide (PAXSTORE)',
+        page: 'PushTasksGuide',
+        createdAt: '10/21/2023',
+        updated_at: '10/21/2023',
+      },
     ],
   },
 }
