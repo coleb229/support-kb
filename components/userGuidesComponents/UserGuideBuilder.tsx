@@ -68,8 +68,8 @@ const PreviewWindow = ({title, steps, uses}:any) => {
 
   return (
     <div className="p-6 bg-slate-200 rounded-lg w-full box shadow-xl">
-      <h1>{title}</h1>
-      <div className="flex">
+      <h1 className="text-2xl text-black text-center">{title}</h1>
+      <div className="w-full">
         <Walkthrough steps={steps} />
         {uses.length > 0 ? <UseCases list={uses} /> : null}
       </div>
