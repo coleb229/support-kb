@@ -25,7 +25,7 @@ export default function UserGuidesBuilderQuick() {
     <div className="w-full">
       <Dialog>
         <DialogTrigger className="my-6 p-6 border-[1px] border-black hover:bg-black hover:text-white hover:rounded-2xl ease-in duration-200 font-bold">Add Guide +</DialogTrigger>
-        <DialogContent>
+        <DialogContent className="overflow-y-scroll max-h-screen">
           <DialogHeader>
             <DialogTitle>Add a guide using the form below</DialogTitle>
             <DialogDescription>
