@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import React, { useState } from "react";
 import Router from "next/router";
-import Dropzone from "./dropzone";
+import Dropzone from "./Dropzone";
 
 export default function ArticleTables({ guides }:any) {
   return (
