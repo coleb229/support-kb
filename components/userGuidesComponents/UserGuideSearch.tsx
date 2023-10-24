@@ -79,12 +79,12 @@ export const AddImages = ({id}:any) => {
   };
 
   return (
-    <form onSubmit={submitData}>
+    <form action={submitData}>
       <AlertDialog>
         <AlertDialogTrigger>Add Images</AlertDialogTrigger>
-        <AlertDialogContent>
+        <AlertDialogContent className="max-w-xl">
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>Select an image from your local storage</AlertDialogTitle>
             <AlertDialogDescription>
                 <h1>Upload Image</h1>
                 <input
@@ -92,7 +92,6 @@ export const AddImages = ({id}:any) => {
                   accept=".jpg, .png, .gif, .jpeg"
                   type="file"
                 />
-                <input type="submit" value="Upload" />
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
