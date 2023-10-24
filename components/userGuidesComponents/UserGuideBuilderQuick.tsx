@@ -25,7 +25,7 @@ export default function UserGuidesBuilderQuick() {
     <div className="w-full">
       <Dialog>
         <DialogTrigger className="my-6 p-6 border-[1px] border-black hover:bg-black hover:text-white hover:rounded-2xl ease-in duration-200 font-bold">Add Guide +</DialogTrigger>
-        <DialogContent className="overflow-y-scroll max-h-screen">
+        <DialogContent className="max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Add a guide using the form below</DialogTitle>
             <DialogDescription>
@@ -67,7 +67,7 @@ const PreviewWindow = ({title, steps, uses}:any) => {
   uses = uses.split('\n').map((use: string) => use.trim())
 
   return (
-    <div className="p-6 bg-slate-200 rounded-lg w-full box shadow-xl">
+    <div className="p-6 bg-slate-200 rounded-lg w-full box shadow-xl max-h-[35vh] overflow-y-scroll">
       <h1 className="text-2xl text-black text-center">{title}</h1>
       <div className="w-full">
         <Walkthrough steps={steps} />
