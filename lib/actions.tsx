@@ -3,7 +3,6 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { revalidatePath } from 'next/cache'
 import prisma from './prisma'
-import exp from 'constants'
 
 export const newUser = async () => {
   const session = await getServerSession(authOptions)
@@ -130,6 +129,23 @@ export const deleteUserGuide = async (formData: any) => {
       },
     })
     revalidatePath('/user-guides')
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export const uploadUserImage = async (formData: any) => {
+  const session = await getServerSession(authOptions)
+  const email = session?.user?.email
+
+  try {
+    await prisma.userGuideImage.create({
+      data: {
+        publicId: formData.get('publicId'),
+        format: formData.get('format'),
+        version: formData.get('version'),
+      }
+    })
   } catch (error) {
     console.error(error)
   }

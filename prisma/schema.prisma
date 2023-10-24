@@ -44,17 +44,32 @@ model GuideSuggestion {
 }
 
 model UserGuide {
-  id          String   @id @default(cuid()) @map("_id")
-  createdAt   String
-  updatedAt   DateTime @updatedAt @map("updatedAt")
-  title       String
-  steps       String[]
-  uses        String[]
-  published   Boolean  @default(false) @map("isPublished")
-  author      User?    @relation(fields: [authorId], references: [id])
-  authorName  String?
-  authorEmail String?
-  authorId    String?  @map("author")
+  id             String           @id @default(cuid()) @map("_id")
+  createdAt      String
+  updatedAt      DateTime         @updatedAt @map("updatedAt")
+  title          String
+  steps          String[]
+  uses           String[]
+  images         String[]
+  published      Boolean          @default(false) @map("isPublished")
+  author         User?            @relation(fields: [authorId], references: [id])
+  authorName     String?
+  authorEmail    String?
+  authorId       String?          @map("author")
+  UserGuideImage UserGuideImage[]
+}
+
+model UserGuideImage {
+  id        String     @id @default(cuid()) @map("_id")
+  createdAt DateTime   @default(now()) @map("createdAt")
+  updatedAt DateTime   @updatedAt @map("updatedAt")
+  publicId  String
+  format    String
+  version   String
+  published Boolean    @default(false) @map("isPublished")
+  guide     UserGuide? @relation(fields: [guideId], references: [id])
+  guideId   String?    @map("guide")
+  authorId  String?    @map("author")
 }
 
 model User {
