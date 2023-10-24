@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import React, { useState } from "react";
 import Router from "next/router";
+import Dropzone from "./dropzone";
 
 export default function ArticleTables({ guides }:any) {
   return (
@@ -37,7 +38,7 @@ export default function ArticleTables({ guides }:any) {
                 <CommandItem>
                   <div className="flex justify-between w-full">
                     <a href={`/user-guides/${guide.id}`}>{guide.title}</a>
-                    <AddImages id={guide.id} />
+                    <AddImages />
                   </div>
                 </CommandItem>
               ))}
@@ -49,49 +50,16 @@ export default function ArticleTables({ guides }:any) {
   )
 }
 
-export const AddImages = ({id}:any) => {
-  const [imageUploaded, setImageUploaded] = useState();
-
-  const handleChange = (event:any) => {
-    setImageUploaded(event.target.files[0]);
-  };
-
-  const submitData = async (e:any) => {
-    e.preventDefault();
-
-    if (!imageUploaded) {
-      return;
-    }
-
-    try {
-      const formData = new FormData();
-      formData.append("image", imageUploaded);
-
-      await fetch("/api/upload", {
-        method: "POST",
-        body: formData
-      });
-
-      Router.push("/");
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
+export const AddImages = () => {
   return (
-    <form action={submitData}>
+    <form action=''>
       <AlertDialog>
         <AlertDialogTrigger>Add Images</AlertDialogTrigger>
-        <AlertDialogContent className="max-w-xl">
+        <AlertDialogContent className="max-w-xl max-h-[50vh]">
           <AlertDialogHeader>
             <AlertDialogTitle>Select an image from your local storage</AlertDialogTitle>
             <AlertDialogDescription>
-                <h1>Upload Image</h1>
-                <input
-                  onChange={handleChange}
-                  accept=".jpg, .png, .gif, .jpeg"
-                  type="file"
-                />
+              <Dropzone className='' />
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
