@@ -31,6 +31,34 @@ export default async function RootLayout({
         <body className={inter.className}>
           <main className="flex min-h-screen flex-col items-center justify-center p-24">
             <h1>Access Denied</h1>
+            <p className='mb-20'>Sorry, you must login to access this page.</p>
+            <LoginButton />
+          </main>
+        </body>
+      </html>
+    )
+  } else {
+    return (
+      <html lang="en">
+        <body className={inter.className}>
+          <TopNavbar session={firstName} />
+          {children}
+          <div id='viewLogout'>
+            <LogoutButton />
+          </div>
+        </body>
+      </html>
+    )
+  }
+
+
+  /*
+  if(email === undefined) {
+    return (
+      <html lang="en">
+        <body className={inter.className}>
+          <main className="flex min-h-screen flex-col items-center justify-center p-24">
+            <h1>Access Denied</h1>
             <p className='mb-20'>Sorry, you must login with a getquantic email to access this page.</p>
             <LoginButton />
           </main>
@@ -64,4 +92,5 @@ export default async function RootLayout({
         </html>
       )
   }
+  */
 }
